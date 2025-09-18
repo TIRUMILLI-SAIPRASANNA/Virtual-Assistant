@@ -7,7 +7,7 @@ import axios from "axios";
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
-  const { serverUrl, userData, setUserData } = useContext(UserDataContext); // ✅ fixed context
+  const { serverUrl, setUserData } = useContext(UserDataContext); // ✅ fixed context
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -103,3 +103,4 @@ function SignIn() {
 }
 
 export default SignIn;
+
