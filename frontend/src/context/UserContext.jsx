@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { createContext, useEffect, useState } from 'react'
-export const userDataContext=createContext()
+export const UserDataContext=createContext()
 function UserContext({children}) {
     const serverUrl="https://virtualassistant-backend-ryr4.onrender.com"
     const [userData,setUserData]=useState(null)
