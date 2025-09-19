@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
 import bg from "../assets/authBg.png";
 import { IoEye, IoEyeOff } from "react-icons/io5";
-import { useNavigate } from 'react-router-dom';
-import { UserDataContext } from '../context/UserContext'; // ✅ fixed import
+import { UserNavigate } from 'react-router-dom';
+import { UserDataContext } from '../context/UserContext';
 import axios from "axios";
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
-  const { serverUrl, setUserData } = useContext(userDataContext); // ✅ fixed context
+  const { serverUrl, setUserData } = useContext(userDataContext);
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
