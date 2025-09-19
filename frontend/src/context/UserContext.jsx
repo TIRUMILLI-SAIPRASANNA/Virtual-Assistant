@@ -1,7 +1,7 @@
-import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react';
+import axios from "axios";
+import React, { createContext, useEffect, useState } from "react";
 
-// Export context with consistent name
+// Create and export the context (capital U)
 export const UserDataContext = createContext();
 
 function UserContext({ children }) {
@@ -14,7 +14,9 @@ function UserContext({ children }) {
 
   const handleCurrentUser = async () => {
     try {
-      const result = await axios.get(`${serverUrl}/api/user/current`, { withCredentials: true });
+      const result = await axios.get(`${serverUrl}/api/user/current`, {
+        withCredentials: true,
+      });
       setUserData(result.data);
       console.log(result.data);
     } catch (error) {
